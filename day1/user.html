@@ -1,0 +1,38 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>사용자 정보 입력받고 출력하기</title>
+        <style>
+            #fruit{
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!-- HTML 문서(document)의 일부, 브라우저에 출력할 요소들 및 공간 -->
+        <h1 id="name"></h1>
+        <p id="animal"></p>
+        <p id="fruit"></p>
+
+        <script>
+            // const: 변하지 않는 값(상수), document: 현재 웹페이지(HTML 문서) 전체, querySelector: 쿼리(질의)로 요소를 조회(검색)하는 기능
+            const nameElement = document.querySelector("#name")
+            // let: 변할 수 있는 변수, prompt: 사용자에게 입력을 요청하는 창
+            let name = prompt("당신의 이름은?")
+            // console.log(name)
+            // textContent: 브라우저에 출력
+            nameElement.textContent = name 
+
+            const animalElement = document.querySelector("#animal")
+            let animal = prompt("좋아하는 동물은?")
+            // Template Literal: 백틱(```) 기호를 사용하여 문자열을 생성하느 방법
+            animalElement.textContent = `좋아하는 동물은 ${animal}입니다.`
+
+            document.querySelector("#fruit")
+            .textContent=`좋아하는 과일은 ${prompt("좋아하는 과일은?")}입니다.`
+        </script>    
+    </body>
+    </html>
